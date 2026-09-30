@@ -1,0 +1,62 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.0.2, pluggy-1.6.0
+rootdir: E:\AERIS\backend
+plugins: anyio-4.12.0, langsmith-0.7.7
+collected 8 items
+
+tests\test_api.py ........                                               [100%]
+
+============================== warnings summary ===============================
+C:\Users\hai\AppData\Roaming\Python\Python314\site-packages\starlette\formparsers.py:12
+  C:\Users\hai\AppData\Roaming\Python\Python314\site-packages\starlette\formparsers.py:12: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+app\core\config.py:4
+  E:\AERIS\backend\app\core\config.py:4: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class Settings(BaseSettings):
+
+app\schemas\schemas.py:37
+  E:\AERIS\backend\app\schemas\schemas.py:37: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class CitizenReportOut(BaseModel):
+
+app\schemas\schemas.py:60
+  E:\AERIS\backend\app\schemas\schemas.py:60: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class HotspotOut(BaseModel):
+
+app\schemas\schemas.py:142
+  E:\AERIS\backend\app\schemas\schemas.py:142: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class InterventionOut(BaseModel):
+
+C:\Users\hai\AppData\Roaming\Python\Python314\site-packages\fastapi\routing.py:211: 54 warnings
+  C:\Users\hai\AppData\Roaming\Python\Python314\site-packages\fastapi\routing.py:211: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    is_coroutine = asyncio.iscoroutinefunction(dependant.call)
+
+C:\Users\hai\AppData\Roaming\Python\Python314\site-packages\starlette\_utils.py:42
+tests/test_api.py::test_root
+tests/test_api.py::test_health
+tests/test_api.py::test_air_quality_endpoint
+tests/test_api.py::test_forecast_endpoint
+tests/test_api.py::test_hotspots_endpoint
+tests/test_api.py::test_exposure_endpoint
+tests/test_api.py::test_federated_endpoint
+tests/test_api.py::test_copilot_endpoint
+  C:\Users\hai\AppData\Roaming\Python\Python314\site-packages\starlette\_utils.py:42: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    return asyncio.iscoroutinefunction(obj) or (
+
+C:\Users\hai\AppData\Roaming\Python\Python314\site-packages\starlette\_utils.py:43
+  C:\Users\hai\AppData\Roaming\Python\Python314\site-packages\starlette\_utils.py:43: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    callable(obj) and asyncio.iscoroutinefunction(obj.__call__)
+
+tests/test_api.py::test_hotspots_endpoint
+tests/test_api.py::test_hotspots_endpoint
+tests/test_api.py::test_hotspots_endpoint
+tests/test_api.py::test_hotspots_endpoint
+  C:\Users\hai\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\sql\schema.py:3624: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    return util.wrap_callable(lambda ctx: fn(), fn)  # type: ignore
+
+tests/test_api.py::test_federated_endpoint
+  E:\AERIS\backend\app\services\federated_service.py:62: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "last_updated": datetime.utcnow().isoformat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 8 passed, 74 warnings in 0.90s ========================
